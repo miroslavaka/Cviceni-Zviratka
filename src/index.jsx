@@ -12,8 +12,8 @@ const App = () => {
   const fetchAnimals = () => {
     fetch('https://lrolecek.github.io/zviratka-api/zvirata.json')
       .then((response) => response.json())
-      .then((data) => /* console.log(data.zvirata) */ setAnimal(data.zvirata));
-    // console.log('animal:' + animal);
+      /*  .then((data) =>  setAnimal(data.zvirata)); */
+      .then((animal) => setAnimal(animal.zvirata));
   };
 
   useEffect(() => {
@@ -23,7 +23,6 @@ const App = () => {
   const chooseAnimal = (selectedAnimal) => {
     setSelectedAnimal(selectedAnimal);
     console.log('selectedAnimal: ' + selectedAnimal);
-    console.log(animal);
   };
   return (
     <>
